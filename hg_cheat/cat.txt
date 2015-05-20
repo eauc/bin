@@ -1,0 +1,11 @@
+CAT
+---
+
+hg cat [-r REV] FILE...
+  show comitted file [as it was in REV].
+hg cat -o<FORMAT> FILE...
+  print output to file with FORMAT name.
+  format (see export) :
+    %s basename
+    %d dirname
+    %p root-relative pathname

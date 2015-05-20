@@ -1,0 +1,14 @@
+Tags
+====
+
+git tag -l
+    Will list all tags defined in the repository.
+
+git describe
+    Show the most recent tag that is reachable from a commit 
+
+git describe --all
+    show also branches & light tags
+
+git describe --tags
+    show also light tags

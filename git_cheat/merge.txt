@@ -1,0 +1,27 @@
+Merging
+=======
+
+git merge <branch>
+    merge branch <branch> into the current branch.
+
+git merge <branch> --no-commit
+    merge branch <branch> into the current branch, but do not autocommit the result.
+
+git merge <branch> --edit
+    popup editor to change commit msg.
+
+git merge <branch> -m <msg>
+    specify another commit msg.
+
+git merge <branch> -s ours
+    merge branch <branch> into the current branch, but drops any changes in
+    <branch>, using the current tree as the new tree.
+
+Resolve conflicts
+-----------------
+
+git add
+    add resolved file to index.
+
+git merge --abort
+    abort merge after conflict.

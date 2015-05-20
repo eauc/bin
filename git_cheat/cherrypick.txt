@@ -1,0 +1,8 @@
+Cherry-Picking
+==============
+
+git cherry-pick <commit>
+    recreate <commit> on top of HEAD.
+
+git cherry-pick ..master
+    recreate all commits in master but not in HEAD, on top of HEAD.

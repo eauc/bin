@@ -1,0 +1,11 @@
+Signals
+-------
+
+info signals [SIG]
+handle <SIG>
+  display gdb behaviour on signals.
+
+handle <SIG> <option>
+  set gdb behaviour on 'SIG'.
+    'option' includes : "stop", "nostop", "print", "noprint", "pass", "nopass", "ignore", or "noignore"
+

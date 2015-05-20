@@ -1,0 +1,114 @@
+Branch
+======
+
+List
+----
+
+git branch
+    list local branches
+
+git branch -r
+    list remote-tracking branches
+
+git branch -a
+    list all branches
+
+git branch --contains [commit]
+    list branches containing [commit] (default to HEAD).
+
+git branch --merged [commit]
+    list branches contained in [commit] (default to HEAD).
+
+git branch --no-merged [commit]
+    list branches not contained in [commit] (default to HEAD).
+
+Create
+------
+
+git branch <new_branch> [commit]
+    create <new_branch> pointing at [commit] (default to HEAD).
+    does not switch to it.
+
+git checkout -b <new_branch> <commit>
+    create <new_branch> pointing at <commit> and switch to it.
+
+git branck --edit-description [branch]
+    write branch description.
+
+Switch
+------
+
+git checkout <branch>
+    switch to <branch>
+    update HEAD & staging & working to <branch>
+    local changes in working are applied on top of <branch>
+    fails if conflict between local changes and <branch>
+
+git checkout -m <branch>
+    in case of conflict with local changes, tries to merge
+
+Reset
+-----
+
+git reset --soft <commit>
+    commit -> HEAD
+    reset HEAD to <commit>. does not touch staging or working area.
+
+git reset <commit>
+    commit -> HEAD & staging
+    reset HEAD and staging area to <commit>. does not touch working tree.
+
+git reset --merge <commit>
+    reset HEAD and staging area to <commit>.
+    merge changes between <commit> and HEAD into working area.
+    fails on merge conflict.
+
+git reset --hard <commit>
+    commit -> HEAD & staging & working
+    reset HEAD, staging and working area to <commit>. local changes are discarded !
+
+Remote
+------
+
+git push <remote> <local_branch>:<remote_branch>
+    push <local_branch> in <remote>/<remote_branch>
+
+git branch <new_branch> <commit>
+    by default <new_branch> tracks <commit>.
+
+git branch --no-track <new_branch> <commit>
+    <new_branch> does not track <commit>
+
+git branch --set-upstream <branch> <remote-branch>
+    make an existing <branch> track a <remote-branch>
+
+Delete
+------
+
+git branch -d <branch>
+    delete <branch>. fails if unmerged.
+
+git branch -D <branch>
+    force delete <branch> when unmerged.
+
+git push <remote> :<branch>
+  removes a <branch> from a <remote> repository.
+
+git branch -r -d <remote-branch>
+    delete a remote-tracking branch.
+    branch will be recreated at next git fetch unless deleted on remote
+    or git is configured not to fetch this remote branch.
+
+
+Create a topic branch for last N commits
+----------------------------------------
+
+git branch <topic>
+    create the topic branch pointing to current HEAD.
+    note : the current branch does not change.
+
+git reset --hard HEAD^<N>
+    reset current branch to last off-topic commit.
+
+git checkout <topic>
+    switch branch to <topic>

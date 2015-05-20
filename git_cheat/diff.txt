@@ -1,0 +1,23 @@
+Diff
+====
+
+git diff
+    working|staging
+
+git diff --cached [<file>]
+    staging|HEAD
+
+git diff HEAD [<file>]
+    working|HEAD
+
+git diff ^other master
+git diff :1:hello :3:hello
+
+git diff -M
+    detect renames.
+
+git diff -w
+    ignore whitespace.
+
+git diff --stats
+    show files stats.

@@ -1,0 +1,15 @@
+Threads
+-------
+
+info threads
+  display threads information.
+
+thread <n>
+  switch to nth thread context.
+
+thread apply all <cmd>
+  run <cmd> for all threads (eg. 'bt').
+
+set scheduler-locking off|on|step
+  disable|enable|'disable with step' thread scheduler.
+  (is disabled only the current thread will execute !)

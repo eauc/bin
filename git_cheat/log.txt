@@ -1,0 +1,48 @@
+Log
+====
+
+Rev List
+--------
+
+git rev-list <commit>... ^<commit>...
+    show commits included in <commit> ancestry but not included in ^<commit> ancestry.
+
+git rev-list --since=<date>, --after=<date>
+    Show commits more recent than a specific date.
+git rev-list --until=<date>, --before=<date>
+    Show commits older than a specific date.
+
+git rev-list --author=<pattern>, --committer=<pattern>
+    Limit the commits output to ones with author/committer header lines that match the specified pattern.
+git rev-list --grep=<pattern>
+    Limit the commits output to ones with log message that matches the specified pattern.
+       
+git rev-list --remove-empty
+    Stop when a given path disappears from the tree.
+
+git rev-list --merges
+    Print only merge commits.
+git rev-list --no-merges
+    Do not print commits with more than one parent.
+       
+git rev-list --branches[=<pattern>]
+    Pretend as if all the refs in refs/heads are listed on the command line as <commit>.
+git rev-list --tags[=<pattern>]
+    Pretend as if all the refs in refs/tags are listed on the command line as <commit>.
+git rev-list --remotes[=<pattern>]
+    Pretend as if all the refs in refs/remotes are listed on the command line as <commit>.
+
+File
+----
+
+git whatchanged <file>
+git whatchanged --since="three days ago" --oneline
+git whatchanged ORIG_HEAD..HEAD --oneline Makefile
+    show only the commits which affected <file> listing the most recent first
+
+git log –-follow file
+git log --name-only --follow --all -- file
+  show file history, following renames
+
+git rev-list <commit>... <file>
+    show commits modifying <file> in <commit> history.

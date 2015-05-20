@@ -1,0 +1,24 @@
+Undo
+====
+
+Undo Add
+--------
+
+git reset [file]
+    reset [file] in staging area to its state in HEAD.
+
+Undo Commit
+-----------
+
+git reset --soft HEAD^[N]
+    Undo your last [N] commits, but keep the changes in the staging area for editing.
+
+git reset --hard HEAD^[N]
+    Definitively undo last [N] commits (they will be lost).
+
+Undo Merge
+----------
+
+git reset --hard ORIG_HEAD or git reset --hard origin/master 
+  undo your most recent *successful* merge *and* any changes that occurred
+  after.  Useful for forgetting about the merge you just did.

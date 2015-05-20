@@ -1,0 +1,15 @@
+Diff
+----
+
+hg diff [FILE...]
+  diff between working dir and its parent.
+hg diff -r REV
+  diff between working dir and REV.
+hg diff -c REV
+  diff between REV and its parent.
+hg diff -r REV1..REV2
+  diff between REV1 and REV2.
+hg diff -w
+  ignore whitespaces.
+hg diff --stat
+  change stats.

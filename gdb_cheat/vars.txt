@@ -1,0 +1,39 @@
+Vars
+----
+
+info variable <regex>
+  display informations on all variables matching 'regex'.
+info functions <regex>
+  display informations on all functions matching 'regex'.
+whatis <var>
+  display 'var' type.
+
+print <var>
+print <casted_var>
+  print var's value
+print /x <var>
+  hexadecimal
+print /o <var>
+  octal
+print /t <var>
+  binary
+print <var>@<n>
+  consider 'var' to be an array and print nth element.
+print <fmt>, <args,...>
+  use 'printf' format string
+
+set [variable] <var>=<value>
+  set 'var' to 'value'
+
+examine /<n><fmt><sz> <addr>
+x /<n><fmt><sz> <addr>
+  print memory at 'addr'.
+    <fmt>=[c|d|x|s]
+    <sz>=[b|h|w|g]
+
+display <var>
+  print var after each exec stop.
+delete display <n>
+  remove nth display.
+set print pretty on
+  pretty print :)

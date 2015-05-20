@@ -1,0 +1,24 @@
+Branching
+---------
+
+hg branches
+  list repository branches.
+hg branches -a
+  only active (not merged) branches.
+hg branches -c
+  closed branches.
+hg branch
+  show current branch.
+hg branch [-f] <name>
+  create new branch pointing to working directory (only effective after next commit).
+hg branch -C
+  revert a branch change.
+hg update <branch>
+hg checkout <branch>
+  checkout branch in working directory.
+hg commit --close-branch
+  close current branch.
+hg incoming -b <BRANCH>
+hg outgoing -b <BRANCH>
+hg push -b <BRANCH>
+hg pull -b <BRANCH>

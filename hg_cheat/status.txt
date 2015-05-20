@@ -1,0 +1,17 @@
+Status
+------
+
+hg status -r REV
+  see changes in REV.
+
+Heads
+-----
+
+hg heads
+  see all local branches heads.
+hg heads -c
+  closed branches.
+hg heads -t
+  only unmerged branches.
+hg parents [-r REV]
+  show parent rev of working dir [or REV].

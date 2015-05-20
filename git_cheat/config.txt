@@ -1,0 +1,67 @@
+Configuration
+=============
+
+git config --list
+  To view all options
+
+git config --global user.name 'John Doe'
+git config --global user.email johndoe@example.com
+  sets your name and email for commit messages
+
+git config branch.autosetupmerge true
+  tells git-branch and git-checkout to setup new branches so that git-pull(1)
+  will appropriately merge from that remote branch.
+
+git config core.autocrlf true
+  This setting tells git to convert the newlines to the system's standard
+  when checking out files, and to LF newlines when committing in
+
+git config apply.whitespace nowarn
+  To ignore whitespace
+
+Colors
+------
+
+Add colors to your ~/.gitconfig file:
+  [color]
+    ui = auto
+  [color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+  [color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+  [color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+Highlight whitespace in diffs
+  [color]
+    ui = true
+  [color "diff"]
+    whitespace = red reverse
+  [core]
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+Environment
+-----------
+
+GIT_AUTHOR_NAME, GIT_COMMITTER_NAME
+  Your full name to be recorded in any newly created commits.  Overrides
+  user.name in .git/config
+
+GIT_AUTHOR_EMAIL, GIT_COMMITTER_EMAIL
+  Your email address to be recorded in any newly created commits.  Overrides
+  user.email in .git/config
+
+GIT_DIR
+  Location of the repository to use (for out of working directory repositories)
+
+GIT_WORKING_TREE
+  Location of the Working Directory - use with GIT_DIR to specifiy the working
+  directory root
+  or to work without being in the working directory at all.

@@ -1,0 +1,11 @@
+Backout
+-------
+
+hg backout -r REV.
+  create a changeset undoing the changes in REV.
+  WARNING : if REV is the parent of the working directory, the changeset is automatically commited.
+hg backout --merge -r REV.
+  commit a changeset undoing REV as a child of REV,
+  then prepare a merge changeset with the parent of the working directory.
+hg backout -m "message" -r REV.
+  use "message" as commit message.

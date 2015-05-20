@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+
+def print_topic_list dir
+  puts "\nSelect a topic :"
+  Dir.chdir(dir)
+  Dir.glob("*_cheat")
+    .select { |f| File.directory?(f) }
+    .sort.each do |f| 
+    puts "\t" + f.gsub("_cheat","")
+  end
+  puts ""
+end
+
+def print_sheet_list dir
+  puts "\nSelect a cheatsheet :"
+  puts "\tall"
+  Dir.chdir(dir)
+  Dir.glob("*.txt")
+    .sort.each do |f| 
+    puts "\t" + f.gsub(".txt","")
+  end
+  puts ""
+end
+
+def print_sheets sheets
+  sheets.each do |sheet|
+    File.open(sheet) do |file|
+      puts ""
+      file.each do |line|
+        puts line
+      end
+      puts ""
+    end
+  end
+end
+
+if ARGV.empty? || ARGV.length > 2
+  puts "\nUsage : cheat <topic> <cheatSheet>\n"
+  print_topic_list File.dirname(__FILE__)
+  exit 1
+end
+
+topic = ARGV[0]
+cheat_dir = File.join(File.dirname(__FILE__), "#{topic}_cheat")
+unless Dir.exist?(cheat_dir)
+  puts "\nUnkown topic '#{topic}' (directory #{cheat_dir} not found !)"
+  print_topic_list File.dirname(__FILE__)
+  exit 1
+end
+
+if ARGV.length == 1
+  print_sheet_list cheat_dir
+else
+  cheat_files = []
+  if ARGV[1] == 'all'
+    cheat_files = Dir.glob(File.join(File.dirname(__FILE__), "#{topic}_cheat", "*.txt"))
+  else
+    file = File.join(cheat_dir, ARGV[1] + ".txt")
+    if File.readable?(file)
+      cheat_files << file
+    else
+      puts "\nUnkown #{topic} cheatSheet '#{ARGV[1]}' (file #{file} not found !)"
+      print_sheet_list cheat_dir
+      exit 1
+    end
+  end
+  print_sheets cheat_files
+end

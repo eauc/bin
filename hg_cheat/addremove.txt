@@ -1,0 +1,26 @@
+Adding files
+------------
+
+hg add -X <pattern> [files]
+  exclude pattern matching files.
+hg add -n [files]
+  dry-run.
+hg addremove
+  add new files and remove missing files.
+hg forget [files]
+  stop tracking files / undo add files.
+hg forget "set:added()"
+  undo hg add.
+
+hg record [FILES...]
+  interactively add and commit FILES.
+
+Removing files
+--------------
+
+hg remove <FILE...>
+  remove FILE... from working dir on next commit.
+hg remove -A [FILE...]
+  record delete for missing files.
+hg revert <FILE...>
+  undo revome file

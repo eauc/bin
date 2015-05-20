@@ -1,0 +1,14 @@
+Bisect
+------
+
+hg bisect --bad REV2 && hg bisect --good REV1
+  start a bisect
+hg bisect --good || hg bisect --bad || hg bisect --skip
+  mark current REV as good/bad/skipped.
+hg bisect --reset
+  forget current bisection.
+hg log --graph -r "bisect(range)"
+  see all commit included in current bisection.
+hg log -r "bisect(pruned)"
+  see commit already marked in current bisection.
+

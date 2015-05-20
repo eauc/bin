@@ -1,0 +1,28 @@
+Breakpoints
+-----------
+
+info break
+  display current breakpoints.
+
+break <location=func|file:line|addr> [thead <num>] [if <condition>]
+  set breakpoint.
+tbreak <location=func|file:line|addr> [thead <num>] [if <condition>]
+  set temporary breakpoint (once hit it's deleted)
+rbreak <regex>
+  set breakpoint for all function matching <regex>.
+clear <location=func|file:line|addr>
+  delete breakpoint at <location>.
+delete <n>
+  delete nth breakpoint (see info).
+
+watch <var|expression>
+watch [cast]<addr>
+  set (write) watchpoint.
+rwatch <var>
+rwatch [cast]<addr>
+  set (read) watchpoint.
+awatch <var>
+awatch [cast]<addr>
+  set (all) watchpoint.
+delete <n>
+  delete watchpoint.

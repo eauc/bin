@@ -1,0 +1,76 @@
+Patch Queues
+------------
+
+hg init --mq
+  initialize mq for current repos (everything is stored in .hg/patches).
+
+
+hg qnew [-m <MSG>] <NAME>
+  create new patch named NAME [with commit msg MSG].
+hg qrefresh [-i]
+  add changes in working directory to top applied patch [interactive].
+hg qrefresh -m <msg>
+  change commit msg of current patch.
+hg qrefresh -e
+  edit commit msg of current patch.
+hg qfold <NAME>
+  fold the named patch into the current patch.
+hg qfinish <NAME>
+  move applied patch NAME into repository history.
+hg qfinish -a
+  move all applied patches into repository history.
+
+hg qrename
+  rename a patch.
+hg qdelete <NAME>
+  remove patch NAME from queue.
+hg strip
+   strip changesets and all their descendants from the repository.
+
+hg qtop
+  print the name of the current patch.
+hg qdiff
+  diff of the current patch and subsequent modifications.
+hg qseries
+  ordered list of all patches in queue.
+hg qapplied
+  list patches currently applied to working directory.
+hg qunapplied
+  print the patches not yet applied
+hg qnext
+  print the name of the next patch
+hg qprev
+  print the name of the previous patch
+
+hg qpop
+hg qpop <NAME>
+hg qpop -a
+  pop the current/named/all patch off the stack.
+hg qpush
+hg push <NAME>
+hg push -a
+  push the next/named/all patch onto the stack.
+hg qgoto <NAME>
+  push or pop patches until named patch is at top of stack
+
+hg qimport <PATCH_FILE>
+  import a patch in queue.
+
+Multiple queues
+---------------
+
+hg qqueue -c <NAME>
+  create new queue named NAME and switch to it.
+hg qqueue <NAME>
+  switch to queue NAME.
+hg qqueue --rename <NEW_NAME>
+  rename active queue.
+hg qqueue --delete <NAME>
+[hg qqueue --purge <NAME>]
+  delete queue NAME [and delete patch dir].
+
+hg qqueue -l
+  list all queues.
+hg qqueue --active
+  print name of active queue.
+

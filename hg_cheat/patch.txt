@@ -1,0 +1,27 @@
+Bundle
+------
+
+hg bundle [-b <BRANCH>] <FILE> <DEST>
+  bundle into FILE all commits [on BRANCH] not present at DEST.
+hg bundle --base REV <FILE>
+  bundle into FILE all commit assuming REV is available at destination.
+hg bundle -r REV <FILE>
+  bundle REV into FILE.
+hg unbundle <FILE>
+
+Export
+------
+
+hg export -r REV | hg import -
+  tranplant REV to the current branch.
+hg export --git -r REV1..REV2 > FILE
+  export a range of REV to FILE (with rename infos).
+hg import [--force] PATCH
+  import PATCH on top of working dir parent 
+  [do not fail if working dir as uncomited changes].
+hg import --exact PATCH
+  tries to recreate PATCH changeset history.
+hg import --bypass PATCH
+  apply patch on working dir parent, without changing working dir.
+hg import http://server/hg/rev/5ca8c111e9aa
+  import changeset from hgweb server.

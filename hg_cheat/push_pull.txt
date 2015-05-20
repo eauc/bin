@@ -1,0 +1,19 @@
+Push-Pull
+---------
+
+hg outcoming [-f] [-B NAME] [-b BRANCH] [PATH]
+hg push [-f] [-B NAME] [-b BRANCH] [PATH]
+hg incoming [-f] [-B NAME] [-b BRANCH] [PATH]
+hg pull [-f] [-B NAME] [-b BRANCH] [PATH]
+  pull/pull changesets [from unrelated repos] [pull bookmark] [from BRANCH]
+hg pull -u
+  update to new branch head.
+hg recover
+  recover from interrupted pull.
+
+Paths
+-----
+hg paths
+hg paths default-push
+hg paths default-pull
+

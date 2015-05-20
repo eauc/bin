@@ -1,0 +1,14 @@
+Rebase
+------
+
+hg rebase --source A --dest B
+  rebase A and its descendant on B.
+hg rebase --base A --dest B
+  rebase A and its descendant/ancestor on B, up to the common point between A and B ancestors.
+hg rebase --continue
+hg rebase --abort
+  for interrupted rebase.
+hg rebase --collapse ...
+  collapse rebased commits.
+hg rebase --detach ...
+  detach rebased commits from their previous ancestor in case its not an ancestor of B.

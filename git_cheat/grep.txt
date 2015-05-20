@@ -1,0 +1,20 @@
+Grep
+====
+
+git grep <regex>
+    search for <regex> in tracked files in working area.
+
+git grep --untracked <regex>
+    search for <regex> in all files in working area.
+
+git grep --cached <regex>
+    search for <regex> in tracked files in working area.
+
+git grep <commit>.. <regex>
+    search for <regex> in files at <commit>.
+
+git grep -<n> <regex>
+    show <n> lines of context.
+
+git grep -W <regex>
+    show function context.

@@ -1,0 +1,10 @@
+Update
+------
+
+hg update [REV]
+  update working dir to branch head [or REV], merging uncommitted changes.
+hg update -c [REV]
+  fails if uncommitted changes.
+hg update -C [REV]
+  discards uncomitted changes.
+

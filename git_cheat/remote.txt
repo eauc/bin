@@ -1,0 +1,77 @@
+Remotes
+=======
+
+Fetch
+-----
+
+git fetch <repos>
+    fetch <repos> references. does not update local refs.
+
+git fetch origin
+git log dev..origin/dev
+    git incoming.
+
+git fetch origin
+git log origin/dev..dev
+    git outgoing.
+
+Pull
+----
+
+git pull <repos> <branch>
+    fetch <repos>/<branch> and merge it in local <branch>
+
+Push
+----
+
+git push <repos> <local>:<remote>
+    update <repos>/<remote> with <local>. only fast-forward.
+
+git push <repos> +<local>:<remote>
+    update <repos>/<remote> with <local>. even not fast-forward.
+
+git push <repos> <local>
+    update <repos>/<local> with <local>.
+
+git push <repos> :<remote>
+    delete <repos>/<remote>.
+
+git push <repos> :
+    push matching branches in <repos>.
+
+git push --prune <repos>
+    remove remote branches that don't have a local counterpart.
+
+Remote
+------
+
+git remote show <name>
+    show information about <name>.
+
+git remote add <name> <url>
+    add a remote, tracking all branches.
+
+git remote add -t <branch> <name> <url>
+    add a remote, tracking only <branch>.
+
+git remote rename <old> <new>
+    rename remote <old> to <new>.
+
+git remote rm <name>
+    remove a remote.
+
+Remote Head
+-----------
+
+git remote set-head <name> <branch>
+    set default remote branch to <branch> 
+    (you can specify <name> instead of <name>/<branch>).
+
+git remote set-head <name> -a
+    set default remote branch to its current HEAD.
+
+git remote set-head <name> -d
+    delete default remote branch.
+
+git remote prune <name>
+    delete remote-tracking branches for branches that has been deleted in remote.

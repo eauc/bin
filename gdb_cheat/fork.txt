@@ -1,0 +1,18 @@
+Fork
+---------
+
+show follow-fork-mode
+set follow-fork-mode <parent|child|ask>
+  choose which process gdb follows on a fork, or ask each time.
+
+set detach-on-fork off
+  if disabled, the untracked process will be suspended on fork.
+
+info forks
+  see the list of forked processes.
+fork <fork-id>
+  switch between forked processes.
+detach fork <fork-id>
+  detach a forked process (and let it run along).
+delete fork <fork-id>
+  kill a forked processes. 

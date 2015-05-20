@@ -1,0 +1,16 @@
+Stack
+-----
+
+backtrace
+bt
+  display stack trace.
+bt full
+  display more information (inc. local vars).
+
+frame <n>
+  got to frame #n.
+up
+down
+  move up/down one frame.
+info frame <n>
+  display detailed frame info (inc. args, locals, regs).

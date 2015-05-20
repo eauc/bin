@@ -1,0 +1,21 @@
+Shelve
+------
+
+hg shelve
+  Temporarily stash away changes. You can select the exact hunks of changes you want to shelve.
+hg shelve --all
+  Temporarily stash away changes. All hunks will automatically be selected.
+hg unshelve
+  Get the changes back into the workdir.
+
+hg shelve --name <name>
+  Temporarily stash away changes to the shelf <name>.
+  Any changes already shelved to a different shelf will not be included.
+hg shelve --name <name> --append
+  Add any changes to the existing shelf <name>.
+hg unshelve --name <name>
+  Get the changes stashed away to the shelf myshelf back into the workdir, and remove the shelf. 
+  Any changes shelved to a different shelf will not be included.
+
+hg shelve --list
+  List all current shelves.

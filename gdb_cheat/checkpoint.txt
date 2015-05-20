@@ -1,0 +1,11 @@
+Checkpoint
+----------
+
+checkpoint
+  fork current state.
+restart <id>
+  switch back to forked state.
+info checkpoints
+  see defined checkpoints.
+delete checkpoint <id>
+  remove checkpoint.

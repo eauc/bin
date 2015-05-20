@@ -1,0 +1,31 @@
+Submodules
+----------
+
+git submodule add <remote_repository> <path/to/submodule>
+  add the given repository at the given path.
+
+git submodule update [--init]
+  Update the registered submodules
+
+git submodule foreach <command>
+  Executes the given command within each checked out submodule.
+
+Removing submodules
+   1. Delete the relevant line from the .gitmodules file.
+   2. Delete the relevant section from .git/config.
+   3. Run git rm --cached path_to_submodule (no trailing slash).
+   4. Commit and delete the now untracked submodule files.
+
+Updating submodules
+  To update a submodule to a new commit:
+    1. update submodule:
+        cd <path to submodule>
+        git pull
+    2. commit the new version of submodule:
+        cd <path to toplevel>
+        git commit -m "update submodule version"
+    3. check that the submodule has the correct version
+        git submodule status
+  If the update in the submodule is not committed in the
+  main repository, it is lost and doing git submodule
+  update will revert to the previous version.

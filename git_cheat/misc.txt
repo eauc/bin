@@ -1,0 +1,6 @@
+Misc
+----
+
+git fsck --no-reflog
+
+git update-index --assume-unchanged Makefile

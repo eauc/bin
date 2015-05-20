@@ -1,0 +1,49 @@
+Stashing
+========
+
+git stash list
+    list all current stashes
+
+Create
+------
+
+git stash
+git stash save [name]
+    save staging|working arear to a new stash, then reset them to HEAD.
+
+git stash --keep-index
+    staging area is left intact.
+
+git stash --include-untracked
+    include untracked file in stash, then remove then from working area.
+
+git stash --all
+    include untracked and ignored file in stash, then remove then from working area.
+
+Apply
+-----
+
+git stash apply [stash]
+git stash pop [stash]
+    restore the changes from the [stash] (default to most recent) in working area only,
+    and pop remove it from the stack of stashed changes.
+
+git stash apply --index [stash]
+git stash pop --index [stash]
+    restore the changes from the [stash] (default to most recent) in working and staging area,
+    and pop remove it from the stack of stashed changes.
+
+git stash branch <name> <stash>
+    create a branch <name> pointing at <stash> base and apply stash on it.
+
+git stash drop [<stash-name>]
+    delete the stash
+
+git stash clear
+    delete all current stashes
+
+Show
+----
+
+git stash show <name>
+    show the contents of a stash - accepts all diff args

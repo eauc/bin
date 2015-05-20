@@ -1,0 +1,60 @@
+File
+====
+
+Show
+----
+
+git show <commit>:<file>
+    display <file> content in <commit>.
+
+git show :<file>
+    display <file> content in staging area.
+
+Reset
+-----
+
+git checkout <file>
+    staging -> working
+
+git checkout <commit> <file>
+    commit -> staging & working
+
+git reset <commit> <file>
+    commit -> staging
+
+Log
+---
+
+git whatchanged <file>
+git whatchanged --since="three days ago" --oneline
+git whatchanged ORIG_HEAD..HEAD --oneline Makefile
+    show only the commits which affected <file> listing the most recent first
+
+git log –-follow file
+git log --name-only --follow --all -- file
+    show file history, following renames
+
+git rev-list <commit>... <file>
+    show commits modifying <file> in <commit> history.
+
+List
+----
+
+git ls-files -c, --cached
+    Show cached files in the output (default)
+
+git ls-files -d, --deleted
+    Show deleted files in the output
+
+git ls-files -m, --modified
+    Show modified files in the output
+
+git ls-files -o, --others
+    Show untracked files in the output
+
+git ls-files -i, --ignored
+    Show only ignored files in the output.
+
+git ls-files -u, --unmerged
+    Show unmerged files in the output (forces --stage)
+

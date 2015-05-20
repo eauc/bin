@@ -1,0 +1,50 @@
+Execution
+---------
+
+show args
+  display program arguments.
+$ gdb -args <parameters
+set args <args...>
+  set program arguments.
+
+show environment
+  display environment variables.
+set environment <var>=<value>
+  set environment variable.
+
+generate-core-file
+  dump a core with current program state.
+
+info program
+  display current program information (inc. PID).
+
+next [n]
+  execute next line of code (do not enter functions).
+nexti [n]
+  execute next assembler instruction (do not enter functions).
+step [n]
+  execute next line of code (enter functions).
+stepi [n]
+  execute next assembler instruction (enter functions).
+continue
+  d'oh.
+finish
+  continue until current frame returns.
+jump <addr>
+  continue execution at 'addr'.
+until
+  continue untile src line or location.
+  (! prog must already be running !)
+call <func>
+  call 'func' in the program.
+return <expression>
+  returns from current function with value <expression>.
+
+show step-mode
+set step-mode <on|off>
+  step mode force gdb to step into functions without debug symbols.
+
+show follow-fork-mode
+set follow-fork-mode <parent|child|ask>
+  choose which process gdb follows on a fork, or ask each time.
+

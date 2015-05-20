@@ -1,0 +1,24 @@
+Bookmarks
+---------
+
+hg bookmarks
+  list bookmarks.
+
+hg bookmark --inactive
+  deactivate current bookmark.
+hg bookmarg --rev <BOOKMARK_NAME>
+  activate bookmark.
+
+hg bookmarks [-r REV] <NAME>
+  create bookmark [on REV].
+hg bookmarks -i [-r REV] <NAME>
+  create inactive bookmark [on REV].
+hg bookmarks -f [-r REV] <NAME>
+  force create (move) bookmark [on REV].
+hg bookmark -m <NAME>
+hg bookmark -d <NAME>
+  delete bookmark.
+
+hg push -B <NAME>
+hg incoming -B
+hg outgoing -B

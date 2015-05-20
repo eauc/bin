@@ -1,0 +1,26 @@
+Revert
+------
+
+hg revert -a
+hg update --clean
+  reset working dir to checkout state.
+hg revert [-r REV]|[-d DATE] <FILE>
+  reset FILE to commit state [in REV]|[at DATE].
+hg purge [-a]
+  remove files not tracked by mercurial [including ignored files].
+rm -r * && hg update --clean
+  reset working dir the hard way.
+
+Undo
+----
+
+hg revert <FILE>
+  undo hg remove FILE.
+hg forget <FILE>
+  undo hg add FILE.
+
+Rollback
+--------
+
+hg rollback [-n]
+  undo last commit/import/pull/push/unbundle [dry-run].

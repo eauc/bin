@@ -1,0 +1,11 @@
+Archive
+=======
+
+git archive master | tar -x -C /somewhere/else
+  Will export expanded tree as tar archive at given path
+
+git archive master | bzip2 > source-tree.tar.bz2
+  Will export archive as bz2
+
+git archive --format zip --output /full/path master
+  Will export as zip

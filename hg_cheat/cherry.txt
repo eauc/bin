@@ -1,0 +1,13 @@
+Cherry picking
+--------------
+
+hg graft REV
+  copy a single REV to current branch.
+hg graft BRANCH
+  copy all commits in BRANCH not already in current branch.
+hg graft --edit
+  invoke editor on commit message.
+hg graft -D "2085::2093 and not 2091"
+  cherrypick a REV range.
+hg graft -c
+  continue after merge interrupt.

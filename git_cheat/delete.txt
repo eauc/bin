@@ -1,0 +1,19 @@
+Deleting
+========
+
+git rm $(git ls-files --deleted)
+  remove all deleted files from the project
+
+git rm --cached <file1> <file2> ...
+  commits absence of <file1>, <file2>, etc... from the project
+
+git clean 
+    remove file unknown to git, not including gitignored files
+
+git clean -d
+    same, including directories
+
+git clean -x
+    remove gitignored files
+
+git clean --dry-run

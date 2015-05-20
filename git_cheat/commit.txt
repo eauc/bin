@@ -1,0 +1,8 @@
+Commit
+======
+
+Reverting
+---------
+
+git revert <rev>
+  reverse commit specified by <rev> and commit the result.

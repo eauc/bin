@@ -1,0 +1,10 @@
+Registers
+---------
+
+info registers
+  display registers values.
+
+print <reg>
+  display 'reg' value.
+set <reg>=<value>
+  set 'reg' to 'value'

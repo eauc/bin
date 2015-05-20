@@ -1,0 +1,9 @@
+(Shared)Libraries
+-----------------
+
+info sharedlibrary
+  display informations on all shared libraries used in current prog.
+
+show stop-on-solib-events
+set stop-on-solib-events <0|1>
+  stop gdb on shared lib load/unload/etc.

@@ -1,0 +1,12 @@
+Macros
+------
+
+$ gcc -gdwarf-2 -g3 prog.c -o prog
+  enable macros debugging
+
+p <macro_name>
+  print macro's value.
+info macro <name>
+  show macro's definition
+macro expand <expression>
+  expands expression containing macros.

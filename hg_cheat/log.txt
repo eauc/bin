@@ -1,0 +1,29 @@
+Log
+---
+
+hg log --removed <FILE>
+  all modifications of FILE, including removal.
+hg log -k <WORD> --template "{rev}\n"
+  all revs that contain WORD.
+hg log -r "last(tagged())::" --template "{desc|firstline}\n"
+  summary of all changeset since last tag.
+hg log -k <USER> -d <DATE>
+  all commit from USER since DATE.
+hg log -r "REV and ancestor(TAG)"
+  check if REV is included in TAG.
+hg log -P REV
+  do not display REV and its ancestors.
+hg lod -m
+  only merge commits.
+
+Heads
+-----
+
+hg heads
+  see all local branches heads.
+hg heads -c
+  closed branches.
+hg heads -t
+  only unmerged branches.
+hg parents [-r REV]
+  show parent rev of working dir [or REV].

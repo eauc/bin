@@ -1,0 +1,18 @@
+Source
+----
+
+list
+  show current listing.
+
+show directories
+directory <path>
+  show/set source directories searched.
+directory
+  reset source directories list.
+
+forw <regex>
+rev <regex>
+  search regular expression in source code forward/reverse.
+
+disass <addrFrom> [addrTo]
+  disassemble code from 'addrFrom' [up to 'addrTo'].

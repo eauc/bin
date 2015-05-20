@@ -1,0 +1,11 @@
+Tags
+----
+
+hg tags
+  list local and global tags.
+hg tag [-m TEXT] [-r REV] NAME
+  create global tag [with TEXT as commit message].
+hg tag -l [-r REV] NAME
+  create local tag.
+hg tag --remove NAME
+  remove tag
