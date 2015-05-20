@@ -1,0 +1,17 @@
+Windows
+-------
+
+c
+  create new window
+n/p
+  move to next/previous window
+0-9
+  move to window number 0-9
+f
+  find window by name
+w
+  menu with all windows
+&
+  kill current window
+,
+  rename window

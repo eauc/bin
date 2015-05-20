@@ -1,0 +1,12 @@
+Copy
+----
+
+[
+  enter copy mode (then use emacs select/yank keys)
+    * press CTRL-SPACE or CTRL-@ to start selecting text
+    * move cursor to end of desired text
+    * press ALT-w to copy selected text
+]
+  paste copied text
+q
+  quit copy mode

@@ -3,9 +3,7 @@
 def print_topic_list dir
   puts "\nSelect a topic :"
   Dir.chdir(dir)
-  Dir.glob("*_cheat")
-    .select { |f| File.directory?(f) }
-    .sort.each do |f| 
+  Dir.glob("*_cheat").select { |f| File.directory?(f) }.sort.each do |f| 
     puts "\t" + f.gsub("_cheat","")
   end
   puts ""
@@ -15,8 +13,7 @@ def print_sheet_list dir
   puts "\nSelect a cheatsheet :"
   puts "\tall"
   Dir.chdir(dir)
-  Dir.glob("*.txt")
-    .sort.each do |f| 
+  Dir.glob("*.txt").sort.each do |f| 
     puts "\t" + f.gsub(".txt","")
   end
   puts ""
@@ -42,7 +39,7 @@ end
 
 topic = ARGV[0]
 cheat_dir = File.join(File.dirname(__FILE__), "#{topic}_cheat")
-unless Dir.exist?(cheat_dir)
+unless File.directory?(cheat_dir)
   puts "\nUnkown topic '#{topic}' (directory #{cheat_dir} not found !)"
   print_topic_list File.dirname(__FILE__)
   exit 1

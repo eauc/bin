@@ -1,0 +1,34 @@
+Managing sessions
+-----------------
+
+tmux
+  start tmux server
+tmux at
+  attach running sessions to a terminal
+tmux ls
+  list running tmux sessions
+exit
+  close tmux session
+
+Sharing sessions between terminals
+----------------------------------
+
+tmux new -s session_name
+  make new named session
+tmux at -t session_name
+  attach to exist session (allowing shared sessions)
+tmux kill-session -t session_name
+  kill named session
+
+Sessions
+--------
+
+s
+  sessions list
+: -> new -s <name>
+  create new session
+$
+: -> rename-session [-t <current-name>] <new-name>
+  rename session
+: -> kill-session -t <name>
+  kill session

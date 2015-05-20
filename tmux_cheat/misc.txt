@@ -1,0 +1,5 @@
+Misc
+----
+
+?
+  show tmux key bindings

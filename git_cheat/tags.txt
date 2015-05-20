@@ -1,14 +1,28 @@
 Tags
 ====
 
-git tag -l
+git tag
     Will list all tags defined in the repository.
+
+git tag -l <pattern>
+    List all tags matching <pattern>
 
 git describe
     Show the most recent tag that is reachable from a commit 
 
 git describe --all
-    show also branches & light tags
+    Show also branches & light tags
 
 git describe --tags
-    show also light tags
+    Show also light tags
+
+git show <name>
+    Show tag commit information
+
+git tag -a <name> <commit>
+git tag -a <name> -m <message>
+    Create annotated tag
+
+git push <remote> --tags
+    Push tags to <remote>
+

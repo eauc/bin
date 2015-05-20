@@ -1,0 +1,18 @@
+Panes
+-----
+
+%
+  split window, adding a vertical pane to the right
+"
+  split window, adding an horizontal pane below
+←/→
+  move focus to left/right pane
+↑/↓
+  move focus to upper/lower pane
+
+!
+  Break current pane into new window
+x
+  Kill the current pane.
+d
+  detach the current client
